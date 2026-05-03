@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LunchWeb — Criamos Sites que Impressionam</title>
+  <meta name="description" content="LunchWeb é uma agência de criação de sites modernos, rápidos e profissionais para o seu negócio crescer online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">Lunch<span>Web</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato" class="nav-cta">Falar Comigo</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge">✦ Agência Digital Premium</div>
+      <h1>Sites que <span class="gradient-text">Vendem</span><br/>para o seu Negócio</h1>
+      <p>Criamos experiências digitais modernas, rápidas e profissionais que transformam visitantes em clientes.</p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn-primary">Quero meu Site</a>
+        <a href="#portfolio" class="btn-ghost">Ver Portfólio</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>50+</strong><span>Projetos Entregues</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Clientes Satisfeitos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>3 dias</strong><span>Tempo Médio</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="browser-mockup">
+        <div class="browser-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <div class="url-bar">lunchwebcliente.com</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-nav"></div>
+          <div class="mock-hero">
+            <div class="mock-title"></div>
+            <div class="mock-sub"></div>
+            <div class="mock-btn"></div>
+          </div>
+          <div class="mock-cards">
+            <div class="mock-card"></div>
+            <div class="mock-card"></div>
+            <div class="mock-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">O que Ofereço</div>
+        <h2>Serviços <span class="gradient-text">Completos</span></h2>
+        <p>Tudo que você precisa para ter uma presença digital profissional</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" id="svc-landing">
+          <div class="service-icon">🚀</div>
+          <h3>Landing Pages</h3>
+          <p>Páginas de conversão otimizadas para transformar visitantes em clientes com design impactante.</p>
+          <div class="service-price">A partir de <strong>€ 2</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+        <div class="service-card featured" id="svc-completo">
+          <div class="featured-badge">Mais Popular</div>
+          <div class="service-icon">💻</div>
+          <h3>Site Completo</h3>
+          <p>Site institucional completo com múltiplas páginas, blog e painel de edição.</p>
+          <div class="service-price">A partir de <strong>€ 5</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+        <div class="service-card" id="svc-ecommerce">
+          <div class="service-icon">🛒</div>
+          <h3>E-commerce</h3>
+          <p>Loja virtual completa com pagamentos, estoque e gestão de pedidos.</p>
+          <div class="service-price">A partir de <strong>€ 5</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+        <div class="service-card" id="svc-redesign">
+          <div class="service-icon">🎨</div>
+          <h3>Redesign</h3>
+          <p>Modernize seu site existente com um visual atualizado e melhor performance.</p>
+          <div class="service-price">A partir de <strong>€ 5</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+        <div class="service-card" id="svc-seo">
+          <div class="service-icon">📈</div>
+          <h3>SEO & Performance</h3>
+          <p>Otimização para aparecer no Google e carregar mais rápido.</p>
+          <div class="service-price">A partir de <strong>€ 5</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+        <div class="service-card" id="svc-manutencao">
+          <div class="service-icon">🔧</div>
+          <h3>Manutenção</h3>
+          <p>Suporte mensal, atualizações e hospedagem gerenciada.</p>
+          <div class="service-price">A partir de <strong>€ 1/mês</strong></div>
+          <a href="#contato" class="service-link">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="process" id="processo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Como Funciona</div>
+        <h2>Do zero ao <span class="gradient-text">online</span></h2>
+        <p>Um processo simples e transparente em apenas 4 etapas</p>
+      </div>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Briefing</h3>
+          <p>Conversamos sobre seu negócio, público-alvo e objetivos do site.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Design</h3>
+          <p>Criamos um protótipo visual para sua aprovação antes de codar.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Desenvolvimento</h3>
+          <p>Desenvolvemos o site com código limpo, rápido e responsivo.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Entrega</h3>
+          <p>Publicamos o site e treinamos você para fazer atualizações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Portfólio</div>
+        <h2>Projetos <span class="gradient-text">Recentes</span></h2>
+        <p>Alguns dos sites que criei para meus clientes</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" id="proj-barbearia">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+            <div class="portfolio-mockup">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-body">
+                <div class="pm-hero-dark">
+                  <div class="pm-title-dark"></div>
+                  <div class="pm-sub-dark"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Barbearia</span>
+            <h3>Corte & Arte Barbearia</h3>
+            <p>Landing page moderna com agendamento online</p>
+          </div>
+        </div>
+        <div class="portfolio-item" id="proj-restaurante">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #2d1b00 0%, #5c3800 50%, #8b5a00 100%);">
+            <div class="portfolio-mockup">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-body">
+                <div class="pm-hero-warm">
+                  <div class="pm-title-warm"></div>
+                  <div class="pm-sub-warm"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Restaurante</span>
+            <h3>Sabor da Casa</h3>
+            <p>Site com cardápio digital e reservas online</p>
+          </div>
+        </div>
+        <div class="portfolio-item" id="proj-clinica">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #0d2137 0%, #1a4a7a 50%, #2196f3 100%);">
+            <div class="portfolio-mockup">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-body">
+                <div class="pm-hero-blue">
+                  <div class="pm-title-blue"></div>
+                  <div class="pm-sub-blue"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Clínica</span>
+            <h3>Clínica Bem Estar</h3>
+            <p>Site institucional com formulário de consulta</p>
+          </div>
+        </div>
+        <div class="portfolio-item" id="proj-ecommerce">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #1a0033 0%, #4a0080 50%, #8000ff 100%);">
+            <div class="portfolio-mockup">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-body">
+                <div class="pm-hero-purple">
+                  <div class="pm-title-purple"></div>
+                  <div class="pm-sub-purple"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">E-commerce</span>
+            <h3>Moda Única Store</h3>
+            <p>Loja virtual completa com 200+ produtos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="container about-inner">
+      <div class="about-visual">
+        <div class="team-card" id="team-guilherme">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #7c3aed, #06b6d4);">G</div>
+          <div class="team-info">
+            <strong>Guilherme Ferreira</strong>
+            <span class="team-role">🏆 Fundador</span>
+            <p>Desenvolvimento web & estratégia digital</p>
+          </div>
+        </div>
+        <div class="team-card" id="team-rafael">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #ec4899, #f59e0b);">R</div>
+          <div class="team-info">
+            <strong>Rafael Galhofas</strong>
+            <span class="team-role">⭐ Co-Fundador</span>
+            <p>Design UI/UX & experiência do utilizador</p>
+          </div>
+        </div>
+        <div class="skills-list">
+          <div class="skill-item"><span class="skill-dot"></span>HTML & CSS</div>
+          <div class="skill-item"><span class="skill-dot"></span>JavaScript</div>
+          <div class="skill-item"><span class="skill-dot"></span>React & Next.js</div>
+          <div class="skill-item"><span class="skill-dot"></span>WordPress</div>
+          <div class="skill-item"><span class="skill-dot"></span>SEO</div>
+          <div class="skill-item"><span class="skill-dot"></span>UI/UX Design</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">Sobre Nós</div>
+        <h2>A equipa por trás da <span class="gradient-text">LunchWeb</span></h2>
+        <p>Somos a Guilherme e o Rafael — uma dupla apaixonada por criar experiências digitais que realmente funcionam. Cada projeto que entregamos é pensado estrategicamente para ajudar o negócio do cliente a crescer.</p>
+        <p>Trabalhamos com atenção total a cada detalhe — do design ao código — para garantir que o teu site seja rápido, bonito e eficiente.</p>
+        <div class="about-highlights">
+          <div class="highlight"><span>✓</span> Comunicação clara e transparente</div>
+          <div class="highlight"><span>✓</span> Entrega dentro do prazo</div>
+          <div class="highlight"><span>✓</span> Suporte pós-entrega incluso</div>
+          <div class="highlight"><span>✓</span> Sites otimizados para Google</div>
+        </div>
+        <a href="#contato" class="btn-primary">Vamos conversar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Depoimentos</div>
+        <h2>O que meus <span class="gradient-text">clientes</span> dizem</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" id="dep-1">
+          <div class="stars">★★★★★</div>
+          <p>"O site ficou incrível! Já na primeira semana recebi 3 novos clientes pelo site. Vale cada centavo!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">M</div>
+            <div>
+              <strong>Maria Santos</strong>
+              <span>Dona da Barbearia Arte & Corte</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="dep-2">
+          <div class="stars">★★★★★</div>
+          <p>"Profissional excepcional! Entregou antes do prazo e ficou disponível para tirar todas as minhas dúvidas."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">J</div>
+            <div>
+              <strong>João Oliveira</strong>
+              <span>Proprietário Sabor da Casa</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="dep-3">
+          <div class="stars">★★★★★</div>
+          <p>"Minha loja virtual triplicou as vendas em 2 meses após o novo site. Recomendo muito!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">A</div>
+            <div>
+              <strong>Ana Costa</strong>
+              <span>Fundadora Moda Única</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Pronto para ter um site <span class="gradient-text">profissional</span>?</h2>
+        <p>Entre em contato agora e receba um orçamento gratuito em menos de 24 horas.</p>
+        <a href="#contato" class="btn-primary btn-large">Quero meu Orçamento Grátis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <div class="section-tag">Contato</div>
+        <h2>Vamos criar algo <span class="gradient-text">incrível</span> juntos?</h2>
+        <p>Preencha o formulário ou me contate diretamente. Respondo em até 2 horas nos dias úteis.</p>
+        <div class="contact-channels">
+          <a href="https://wa.me/5511999999999" class="channel" id="whatsapp-link">
+            <div class="channel-icon">💬</div>
+            <div><strong>WhatsApp</strong><span>Resposta rápida</span></div>
+          </a>
+          <a href="mailto:contato@lunchweb.com.br" class="channel" id="email-link">
+            <div class="channel-icon">📧</div>
+            <div><strong>E-mail</strong><span>contato@lunchweb.com.br</span></div>
+          </a>
+          <a href="https://instagram.com/lunchweb" class="channel" id="instagram-link">
+            <div class="channel-icon">📸</div>
+            <div><strong>Instagram</strong><span>@lunchweb</span></div>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" placeholder="João Silva" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="joao@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de projeto</label>
+          <select id="tipo" name="tipo">
+            <option value="">Selecione...</option>
+            <option value="landing">Landing Page</option>
+            <option value="completo">Site Completo</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="redesign">Redesign</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre seu negócio e o que precisa..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full" id="submit-btn">Enviar Mensagem 🚀</button>
+        <div class="form-success" id="form-success">✅ Mensagem enviada! Retorno em breve.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Lunch<span>Web</span></a>
+          <p>Criamos sites que impressionam e convertem.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 LunchWeb. Feito com ❤️ para impulsionar negócios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
