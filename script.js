@@ -1,11 +1,14 @@
-// ===== PROMO BANNER =====
-const promoBanner = document.getElementById('promo-banner');
+// ===== PROMO MODAL =====
+const promoOverlay = document.getElementById('promo-overlay');
 const promoClose = document.getElementById('promo-close');
-document.body.classList.add('promo-active');
-promoClose.addEventListener('click', () => {
-  promoBanner.classList.add('hidden');
-  document.body.classList.remove('promo-active');
-});
+const promoCta = document.getElementById('promo-cta');
+function closePromo() {
+  promoOverlay.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+document.body.style.overflow = 'hidden';
+promoClose.addEventListener('click', closePromo);
+promoCta.addEventListener('click', closePromo);
 
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');

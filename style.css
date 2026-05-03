@@ -1,54 +1,92 @@
-/* ===== PROMO BANNER ===== */
-.promo-banner {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
-  background: linear-gradient(90deg, #7c3aed, #06b6d4, #ec4899, #7c3aed);
-  background-size: 300% 100%;
-  animation: promo-slide 4s linear infinite;
-  padding: 18px 24px;
+/* ===== PROMO MODAL ===== */
+.promo-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.4s ease;
 }
-@keyframes promo-slide {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.promo-modal {
+  background: #0f0f1a;
+  border: 1px solid rgba(124,58,237,0.5);
+  border-radius: 24px;
+  padding: 48px 40px;
+  max-width: 560px; width: 100%;
+  text-align: center;
+  position: relative; overflow: hidden;
+  box-shadow: 0 0 80px rgba(124,58,237,0.4), 0 40px 80px rgba(0,0,0,0.6);
+  animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
 }
-.promo-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-  justify-content: center;
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7) translateY(40px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
 }
-.promo-icon { font-size: 1.8rem; animation: bounce 1s ease infinite; flex-shrink: 0; }
+.promo-glow {
+  position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+  width: 400px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.5) 0%, transparent 70%);
+  pointer-events: none;
+}
+.promo-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff; font-size: 0.75rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 18px; border-radius: 100px;
+  margin-bottom: 20px;
+  animation: pulse-badge 1.5s ease infinite;
+}
+@keyframes pulse-badge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+}
+.promo-emoji { font-size: 4rem; margin-bottom: 12px; animation: bounce 1s ease infinite; }
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-10px); }
 }
-.promo-text { display: flex; flex-direction: column; gap: 4px; text-align: center; }
-.promo-text strong { font-size: 1.3rem; font-weight: 900; color: #fff; letter-spacing: 0.05em; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-.promo-text span { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
-.promo-text span strong { font-size: 0.9rem; letter-spacing: 0; }
-.promo-btn {
-  background: #fff; color: #7c3aed;
-  padding: 10px 24px; border-radius: 100px;
-  font-weight: 800; font-size: 0.9rem;
-  text-decoration: none; white-space: nowrap;
-  transition: all 0.2s; flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.promo-title {
+  font-size: 2.6rem; font-weight: 900; color: #fff;
+  margin-bottom: 16px; line-height: 1.1;
 }
-.promo-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-.promo-close {
-  background: rgba(255,255,255,0.2); border: none; color: #fff;
-  width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
-  font-size: 0.85rem; flex-shrink: 0; transition: all 0.2s;
-  display: flex; align-items: center; justify-content: center;
+.promo-title span {
+  background: linear-gradient(135deg, #a78bfa, #06b6d4);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.promo-close:hover { background: rgba(255,255,255,0.4); }
-.promo-banner.hidden { display: none; }
-body.promo-active .navbar { top: 80px; }
-body.promo-active .hero { padding-top: 200px; }
-
-@media (max-width: 768px) {
-  .promo-banner { padding: 14px 16px; }
-  .promo-text strong { font-size: 1.05rem; }
-  body.promo-active .hero { padding-top: 240px; }
+.promo-desc {
+  color: #94a3b8; font-size: 1.05rem; margin-bottom: 28px; line-height: 1.6;
 }
+.promo-deadline {
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.4);
+  border-radius: 12px; padding: 16px 24px;
+  margin-bottom: 28px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.deadline-label { font-size: 0.8rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.deadline-date { font-size: 1.5rem; font-weight: 900; color: #a78bfa; }
+.promo-cta {
+  display: block; width: 100%;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: #fff; padding: 18px 32px;
+  border-radius: 100px; text-decoration: none;
+  font-weight: 800; font-size: 1.1rem;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 30px rgba(124,58,237,0.5);
+}
+.promo-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(124,58,237,0.7); }
+.promo-skip {
+  background: none; border: none; color: #475569;
+  font-size: 0.85rem; cursor: pointer; font-family: 'Outfit', sans-serif;
+  transition: color 0.2s;
+}
+.promo-skip:hover { color: #94a3b8; }
+.promo-overlay.hidden { display: none; }
 
 /* ===== TEAM CARDS ===== */
 .team-card {
