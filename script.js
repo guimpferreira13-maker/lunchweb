@@ -1,3 +1,12 @@
+// ===== PROMO BANNER =====
+const promoBanner = document.getElementById('promo-banner');
+const promoClose = document.getElementById('promo-close');
+document.body.classList.add('promo-active');
+promoClose.addEventListener('click', () => {
+  promoBanner.classList.add('hidden');
+  document.body.classList.remove('promo-active');
+});
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {

@@ -1,3 +1,55 @@
+/* ===== PROMO BANNER ===== */
+.promo-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4, #ec4899, #7c3aed);
+  background-size: 300% 100%;
+  animation: promo-slide 4s linear infinite;
+  padding: 18px 24px;
+}
+@keyframes promo-slide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.promo-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  justify-content: center;
+}
+.promo-icon { font-size: 1.8rem; animation: bounce 1s ease infinite; flex-shrink: 0; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.promo-text { display: flex; flex-direction: column; gap: 4px; text-align: center; }
+.promo-text strong { font-size: 1.3rem; font-weight: 900; color: #fff; letter-spacing: 0.05em; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.promo-text span { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
+.promo-text span strong { font-size: 0.9rem; letter-spacing: 0; }
+.promo-btn {
+  background: #fff; color: #7c3aed;
+  padding: 10px 24px; border-radius: 100px;
+  font-weight: 800; font-size: 0.9rem;
+  text-decoration: none; white-space: nowrap;
+  transition: all 0.2s; flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.promo-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+.promo-close {
+  background: rgba(255,255,255,0.2); border: none; color: #fff;
+  width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+  font-size: 0.85rem; flex-shrink: 0; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.promo-close:hover { background: rgba(255,255,255,0.4); }
+.promo-banner.hidden { display: none; }
+body.promo-active .navbar { top: 80px; }
+body.promo-active .hero { padding-top: 200px; }
+
+@media (max-width: 768px) {
+  .promo-banner { padding: 14px 16px; }
+  .promo-text strong { font-size: 1.05rem; }
+  body.promo-active .hero { padding-top: 240px; }
+}
+
 /* ===== TEAM CARDS ===== */
 .team-card {
   background: var(--card); border: 1px solid var(--border);
