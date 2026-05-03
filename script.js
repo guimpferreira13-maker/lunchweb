@@ -1,16 +1,5 @@
-// ===== PROMO MODAL =====
-const promoOverlay = document.getElementById('promo-overlay');
-const promoClose = document.getElementById('promo-close');
-const promoCta = document.getElementById('promo-cta');
-function closePromo() {
-  promoOverlay.classList.add('hidden');
-  document.body.style.overflow = '';
-}
-document.body.style.overflow = 'hidden';
-promoClose.addEventListener('click', closePromo);
-promoCta.addEventListener('click', closePromo);
-
 // ===== NAVBAR SCROLL =====
+
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
