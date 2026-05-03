@@ -43,19 +43,44 @@ const observer = new IntersectionObserver((entries) => {
 animateElements.forEach(el => observer.observe(el));
 
 // ===== CONTACT FORM =====
-function handleSubmit(e) {
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+const submitBtn = document.getElementById('submit-btn');
+
+contactForm.addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
-  setTimeout(() => {
-    document.getElementById('contact-form').reset();
-    document.getElementById('form-success').classList.add('show');
-    btn.textContent = 'Enviar Mensagem 🚀';
-    btn.disabled = false;
-    setTimeout(() => document.getElementById('form-success').classList.remove('show'), 5000);
-  }, 1200);
-}
+  
+  submitBtn.textContent = 'Enviando...';
+  submitBtn.disabled = true;
+
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      this.reset();
+      formSuccess.classList.add('show');
+      submitBtn.textContent = 'Enviar Mensagem 🚀';
+      submitBtn.disabled = false;
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+    } else {
+      alert('Erro ao enviar. Por favor, tente novamente.');
+      submitBtn.textContent = 'Enviar Mensagem 🚀';
+      submitBtn.disabled = false;
+    }
+  })
+  .catch(error => {
+    alert('Erro de conexão. Verifique a sua internet.');
+    submitBtn.textContent = 'Enviar Mensagem 🚀';
+    submitBtn.disabled = false;
+  });
+});
 
 // ===== SMOOTH ACTIVE LINK =====
 const sections = document.querySelectorAll('section[id]');
